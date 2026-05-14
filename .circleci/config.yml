@@ -1,0 +1,13 @@
+version: '2.1'
+jobs:
+  init:
+    docker:
+    - image: cimg/base:stable
+    steps:
+    - run:
+        name: command
+        command: printf 'Hello'
+workflows:
+  main:
+    jobs:
+    - init
